@@ -16,7 +16,7 @@ program.command('add')
     const numbers = str.split(options.separator, limit);
     let sum = 0;
     for (let n of numbers) {
-      sum += parseInt(n);
+      sum += parseFloat(n);
     }
     console.log(sum);
   });
@@ -30,7 +30,7 @@ program.command('sub')
     const numbers = str.split(options.separator, limit);
     let sub = 0;
     for (let i = 0; i < numbers.length - 1; i++) {
-      sub = parseInt(numbers[i]) - parseInt(numbers[i + 1])
+      sub = parseFloat(numbers[i]) - parseFloat(numbers[i + 1])
     }
     console.log(sub);
   });
@@ -45,7 +45,7 @@ program.command('mul')
     const numbers = str.split(options.separator, limit);
     let mul = 1;
     for (let i = 0; i < numbers.length; i++) {
-      mul *= parseInt(numbers[i])
+      mul *= parseFloat(numbers[i])
     }
     console.log(mul);
   });
@@ -60,7 +60,7 @@ program.command('div')
     const numbers = str.split(options.separator, limit);
     let division = 0;
     for (let i = 0; i < numbers.length - 1; i++) {
-      division = parseInt(numbers[i]) / parseInt(numbers[i + 1])
+      division = parseFloat(numbers[i]) / parseFloat(numbers[i + 1])
     }
     console.log(division);
   });
@@ -75,7 +75,7 @@ program.command('mod')
     const numbers = str.split(options.separator, limit);
     let modulus = 0;
     for (let i = 0; i < numbers.length - 1; i++) {
-      modulus = parseInt(numbers[i]) % parseInt(numbers[i + 1])
+      modulus = parseFloat(numbers[i]) % parseFloat(numbers[i + 1])
     }
     console.log(modulus);
   });
