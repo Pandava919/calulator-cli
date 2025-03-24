@@ -1,11 +1,13 @@
 const { Command } = require('commander');
 const program = new Command();
 
+//CLI for arithmetic operations
 program
   .name('Calculator')
   .description('Calculator CLI')
   .version('0.8.0');
 
+//Adddition
 program.command('add')
   .description('Add numbers')
   .argument('[number...]')
@@ -16,6 +18,8 @@ program.command('add')
     }
     console.log(sum);
   });
+
+//Substraction
 program.command('sub')
   .description('Substract the numbers')
   .argument('[number...]')
@@ -27,6 +31,7 @@ program.command('sub')
     console.log(sub);
   });
 
+//Multiplication
 program.command('mul')
   .description('Multiply the numbers')
   .argument('[number...]')
@@ -38,6 +43,7 @@ program.command('mul')
     console.log(mul);
   });
 
+//Division
 program.command('div')
   .description('Division of the numbers')
   .argument('[numbers...]')
@@ -49,6 +55,7 @@ program.command('div')
     console.log(division);
   });
 
+//Modulus
 program.command('mod')
   .description('Modulus of the numbers')
   .argument('[numbers...]')
@@ -60,5 +67,5 @@ program.command('mod')
     console.log(modulus);
   });
 
-
+//parse the cli program
 program.parse();
