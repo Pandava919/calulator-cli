@@ -24,9 +24,10 @@ program.command('sub')
   .description('Substract the numbers')
   .argument('[number...]')
   .action((numbers) => {
-    let sub = 0;
-    for (let i = 0; i < numbers.length - 1; i++) {
-      sub = parseFloat(numbers[i]) - parseFloat(numbers[i + 1])
+    let sub = numbers[0]
+    for (let i = 1; i < numbers.length; i++) {
+      sub -= parseFloat(numbers[i])
+      console.log(sub)
     }
     console.log(sub);
   });
@@ -48,9 +49,9 @@ program.command('div')
   .description('Division of the numbers')
   .argument('[numbers...]')
   .action((numbers) => {
-    let division = 0;
-    for (let i = 0; i < numbers.length - 1; i++) {
-      division = parseFloat(numbers[i]) / parseFloat(numbers[i + 1])
+    let division = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+      division /= parseFloat(numbers[i])
     }
     console.log(division);
   });
